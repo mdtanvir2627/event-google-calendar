@@ -65,7 +65,7 @@ app.get("/createEvent", (req, res) => {
       dateTime: "2024-03-08T17:00:00-07:00",
       timeZone: "Asia/Dhaka",
     },
-    // attendees: [{ email: "tuhin.netmow@gmail.com" }],
+    attendees: [{ email: "tuhin.netmow@gmail.com" }],
     attendees: [],
     reminders: {
       useDefault: false,
