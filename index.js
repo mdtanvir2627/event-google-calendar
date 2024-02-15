@@ -54,19 +54,21 @@ app.get("/", (req, res) => {
 
 app.get("/createEvent", (req, res) => {
   var event = {
-    summary: "SquadDeck first event!",
-    location: "Bogura, Bangladesh",
-    description: "SquadDeck event with nodeJS!",
+    summary: "Abahoni Match first event!",
+    location: "Dhaka, Bangladesh",
+    description: "Abahoni event with Football Match!",
     start: {
-      dateTime: "2024-03-05T09:00:00-07:00",
+      dateTime: "2024-03-06T09:00:00-07:00",
       timeZone: "Asia/Dhaka",
     },
     end: {
-      dateTime: "2024-03-08T17:00:00-07:00",
+      dateTime: "2024-03-09T17:00:00-07:00",
       timeZone: "Asia/Dhaka",
     },
-    attendees: [{ email: "tuhin.netmow@gmail.com" }],
-    attendees: [],
+    attendees: [
+      { email: "tuhin.netmow@gmail.com" },
+      { email: "tanvirahmed1418@gmail.com" },
+    ],
     reminders: {
       useDefault: false,
       overrides: [
@@ -87,6 +89,7 @@ app.get("/createEvent", (req, res) => {
         auth: a,
         calendarId: GOOGLE_CALENDAR_ID,
         resource: event,
+        sendNotifications: true,
       },
       function (err, event) {
         if (err) {
