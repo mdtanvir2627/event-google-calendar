@@ -102,4 +102,8 @@ app.get("/createEvent", (req, res) => {
   });
 });
 
-app.listen(3300, () => console.log(`App listening on http://localhost:3300!`));
+const port = process.env.PORT || 3300;
+
+app.listen(port, () => {
+  console.log(`App listening on http://localhost:${port}`);
+});
