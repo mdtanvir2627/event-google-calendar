@@ -58,11 +58,11 @@ app.get("/createEvent", (req, res) => {
     location: "Bogura, Bangladesh",
     description: "SquadDeck event with nodeJS!",
     start: {
-      dateTime: "2024-03-18T09:00:00-07:00",
+      dateTime: "2024-03-05T09:00:00-07:00",
       timeZone: "Asia/Dhaka",
     },
     end: {
-      dateTime: "2024-03-21T17:00:00-07:00",
+      dateTime: "2024-03-08T17:00:00-07:00",
       timeZone: "Asia/Dhaka",
     },
     // attendees: [{ email: "tuhin.netmow@gmail.com" }],
@@ -96,7 +96,7 @@ app.get("/createEvent", (req, res) => {
           return;
         }
         console.log("Event created: %s", event.data);
-        res.jsonp("Event successfully created!");
+        res.send("Event successfully created!");
       }
     );
   });
